@@ -1,1 +1,496 @@
-/* Other rules */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #151515;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: greyscale;
+}
+
+b {
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.header-top {
+  background-color: #202020;
+  height: 50px;
+  border-bottom: solid 1px #404040;
+  display: flex;
+  justify-content: center;
+}
+
+.header-bottom {
+  height: 50px;
+  display: flex;
+}
+
+.split {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #202020;
+  transition: opacity 0.2s;
+}
+
+.split:hover {
+  opacity: 0.2;
+}
+
+.header-link {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.6rem;
+}
+
+.logo > img {
+  height: 100%;
+}
+
+.home {
+  background-color: #000;
+}
+
+.hero {
+  background-image: url("./images/hero-marvel.jpg");
+  background-position: center center;
+  height: calc(100vh - 100px);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 8.2rem;
+  margin: 50px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3.6rem;
+  text-align: center;
+  text-decoration: underline;
+}
+
+p {
+  font-size: 2rem;
+  margin: 50px;
+  text-align: center;
+}
+
+.upcoming {
+  display: flex;
+  justify-content: center;
+}
+
+.upcoming > h2 {
+  font-size: 3.6rem;
+  margin: 50px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.shang-chi {
+  background-image: url("./images/shang-chi.jpg");
+  background-position: center center;
+  background-size: auto;
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #000;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+button {
+  width: 150px;
+  height: 45px;
+  font-weight: 700;
+  border: 1px solid white;
+  color: #fff;
+  background-color: transparent;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.trailer-button {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.eternals {
+  background-image: url("./images/eternals.jpg");
+  background-position: center center;
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  background-color: #000;
+}
+
+.what-if {
+  background-image: url("./images/what_if_marvel.jpg");
+  background-position: center center;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+}
+
+.hawkeye {
+  background-image: url("./images/hawkeye.jpg");
+  background-position: center center;
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #000;
+  position: relative;
+}
+
+.spiderman {
+  background-image: url("./images/spiderman.jpg");
+  background-position: center center;
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #000;
+  position: relative;
+}
+
+.footer {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+.credits {
+  text-align: center;
+}
+
+.credits > a {
+  font-weight: 700;
+}
+
+.credits > a:hover {
+  text-decoration: underline;
+}
+
+.comics-hero {
+  background-image: url("./images/comics-hero.jpg");
+  background-position: center center;
+  height: calc(100vh - 100px);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+form {
+  position: relative;
+  margin: 50px;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  opacity: 0.7;
+  color: #151515;
+}
+
+form > input {
+  width: 80%;
+  height: 35px;
+  padding-left: 40px;
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 700;
+  background-color: #a5a6a7;
+  border: transparent;
+  border-radius: 5px;
+  color: black;
+}
+
+form > input:focus {
+  outline: none;
+}
+
+.comics-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 250px;
+  margin: 25px;
+}
+
+.card > img {
+  width: 100%;
+  height: 305px;
+}
+
+.red {
+  background: linear-gradient(45deg, #e62429, #9b0000);
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.red > h2 {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+.pagination > button:not(:last-child) {
+  margin-right: 20px;
+}
+
+.characters-hero {
+  background-image: url("./images/marvel-characters.jpg");
+  background-position: center center;
+  height: calc(100vh - 100px);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.characters-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.character-card:hover {
+  box-shadow: 10px 10px 2px #000;
+}
+
+.character_link:hover {
+  cursor: default;
+}
+
+.character-card > .illustration:hover,
+.title:hover {
+  cursor: pointer;
+}
+
+.characterId-hero {
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.description {
+  width: 50%;
+  line-height: 25px;
+  padding: 30px;
+}
+
+.characterId-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+
+.character-name {
+  margin-top: 75px;
+}
+
+.comicsId-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 75px;
+}
+
+.loading {
+  height: calc(100vh - 150px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.marvel-wallpaper {
+  height: 50%;
+  width: 50%;
+}
+
+.loading-bar {
+  height: 50%;
+  position: absolute;
+  right: 0;
+  background-color: rgba(21, 21, 21, 0.5);
+}
+
+@keyframes changewidth {
+  from {
+    width: 75%;
+  }
+
+  to {
+    width: 25%;
+  }
+}
+
+.loading-bar {
+  animation-duration: 2s;
+  animation-name: changewidth;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+@media (max-width: 1024px) {
+  .marvel-wallpaper {
+    height: 25%;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 6.8rem;
+    margin: 30px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.6rem;
+    margin: 30px;
+    text-align: center;
+  }
+
+  .characters-hero {
+    background-image: url("./images/marvel-characters.jpg");
+    background-position: top;
+    height: 80vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .comics-hero {
+    background-image: url("./images/comics-hero.jpg");
+    background-position: top;
+    height: 80vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .marvel-wallpaper {
+    height: 20%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 3.6rem;
+    margin: 15px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin: 30px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  .characters-hero {
+    background-image: url("./images/marvel-characters.jpg");
+    background-position: top;
+    height: 60vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .comics-hero {
+    background-image: url("./images/comics-hero.jpg");
+    background-position: top;
+    height: 60vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .marvel-wallpaper {
+    height: 10%;
+  }
+}
