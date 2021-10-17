@@ -38,8 +38,10 @@ const CharacterId = ({ userToken }) => {
       </div>
       <h2>STARRED IN:</h2>
       <div className="container comicsId-container">
-        {data.comics.map((comic, index) => {
-          return <ComicCard comic={comic} />;
+        {data.comics.map((comic) => {
+          return (
+            <ComicCard comic={comic} userToken={userToken} key={comic._id} />
+          );
         })}
       </div>
     </div>
