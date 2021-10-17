@@ -1,12 +1,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import Loading from "../components/Loading";
 import CharacterCard from "../components/CharacterCard";
 import Pagination from "../components/Pagination";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Characters = () => {
+const Characters = ({ userToken }) => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const [skipped, setSkipped] = useState(0);
@@ -54,15 +53,13 @@ const Characters = () => {
         </form>
       </section>
       <div className="container characters-container">
-        {data.results.map((character, index) => {
+        {data.results.map((character) => {
           return (
-            <Link
-              to={`comics/${character._id}`}
+            <CharacterCard
+              character={character}
+              userToken={userToken}
               key={character._id}
-              className="character-link"
-            >
-              <CharacterCard character={character} />
-            </Link>
+            />
           );
         })}
       </div>

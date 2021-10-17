@@ -28,7 +28,33 @@ a:hover {
   height: 50px;
   border-bottom: solid 1px #404040;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+.logo {
+  margin: 0 150px;
+}
+
+.user-area {
+  margin: 0 150px;
+  line-height: 50px;
+}
+
+.connect {
+  margin: 20px;
+}
+
+.connect:hover {
+  text-decoration: underline;
+}
+
+.user-form {
+  width: 50%;
+}
+
+.lbl {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
 }
 
 .header-bottom {
@@ -253,8 +279,21 @@ form > input:focus {
 }
 
 .card {
+  position: relative;
   width: 250px;
   margin: 25px;
+}
+
+.heartIcon {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 30px;
+  filter: drop-shadow(0px 0px 5px #000);
+}
+
+.heartIcon:hover {
+  cursor: pointer;
 }
 
 .card > img {

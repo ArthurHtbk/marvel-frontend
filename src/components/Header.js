@@ -1,13 +1,34 @@
 import { Link } from "react-router-dom";
 import marvelLogo from "../images/logo-marvel.png";
 
-const Header = () => {
+const Header = ({ userToken, setUser }) => {
   return (
     <header>
       <div className="header-top">
         <Link className="logo" to="/">
           <img src={marvelLogo} alt="Marvel logo" />
         </Link>
+        <div className="user-area">
+          {userToken ? (
+            <button
+              type="button"
+              onClick={() => {
+                setUser(null);
+              }}
+            >
+              LOG OUT
+            </button>
+          ) : (
+            <div>
+              <Link className="header-link connect" to="/signup">
+                Sign up
+              </Link>
+              <Link className="header-link connect" to="/login">
+                Log in
+              </Link>
+            </div>
+          )}
+        </div>
       </div>
       <div className="header-bottom">
         <div className="split">

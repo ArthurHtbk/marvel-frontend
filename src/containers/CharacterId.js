@@ -5,7 +5,7 @@ import CharacterCard from "../components/CharacterCard";
 import ComicCard from "../components/ComicCard";
 import Loading from "../components/Loading";
 
-const CharacterId = () => {
+const CharacterId = ({ userToken }) => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
@@ -33,7 +33,7 @@ const CharacterId = () => {
     <div>
       <h1 className="character-name">{data.name}</h1>
       <div className="container characterId-container">
-        <CharacterCard character={data} />
+        <CharacterCard character={data} userToken={userToken} key={data._id} />
         {data.description && <p className="description">{data.description}</p>}
       </div>
       <h2>STARRED IN:</h2>

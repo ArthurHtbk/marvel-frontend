@@ -5,7 +5,7 @@ import ComicCard from "../components/ComicCard";
 import Pagination from "../components/Pagination";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Comics = () => {
+const Comics = ({ userToken }) => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const [skipped, setSkipped] = useState(0);
@@ -53,8 +53,10 @@ const Comics = () => {
         </form>
       </section>
       <div className="container comics-container">
-        {data.results.map((comic, index) => {
-          return <ComicCard comic={comic} />;
+        {data.results.map((comic) => {
+          return (
+            <ComicCard userToken={userToken} comic={comic} key={comic._id} />
+          );
         })}
       </div>
       <Pagination skipped={skipped} setSkipped={setSkipped} data={data} />
