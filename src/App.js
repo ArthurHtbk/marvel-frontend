@@ -5,10 +5,11 @@ import Home from "./containers/Home";
 import Comics from "./containers/Comics";
 import Characters from "./containers/Characters";
 import CharacterId from "./containers/CharacterId";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 import SignUp from "./containers/SignUp";
 import LogIn from "./containers/LogIn";
+import Favorites from "./containers/Favorites";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import "./App.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faSearch, faHeart } from "@fortawesome/free-solid-svg-icons";
@@ -49,6 +50,9 @@ function App() {
         </Route>
         <Route path="/characters">
           <Characters userToken={userToken} />
+        </Route>
+        <Route path="/favorites">
+          <Favorites userToken={userToken} />
         </Route>
         <Route path="/">
           <Home />

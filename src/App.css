@@ -48,6 +48,10 @@ a:hover {
   text-decoration: underline;
 }
 
+.fav-button {
+  margin-right: 20px;
+}
+
 .user-form {
   width: 50%;
 }
@@ -147,6 +151,7 @@ p {
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
+  min-height: calc(100vh - 200px);
 }
 
 button {
@@ -407,6 +412,11 @@ form > input:focus {
 .marvel-wallpaper {
   height: 50%;
   width: 50%;
+}
+
+.favorites-title {
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .loading-bar {

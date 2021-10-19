@@ -10,14 +10,19 @@ const Header = ({ userToken, setUser }) => {
         </Link>
         <div className="user-area">
           {userToken ? (
-            <button
-              type="button"
-              onClick={() => {
-                setUser(null);
-              }}
-            >
-              LOG OUT
-            </button>
+            <div>
+              <button className="fav-button" type="button">
+                <Link to="/favorites">FAVORITES</Link>
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setUser(null);
+                }}
+              >
+                LOG OUT
+              </button>
+            </div>
           ) : (
             <div>
               <Link className="header-link connect" to="/signup">
