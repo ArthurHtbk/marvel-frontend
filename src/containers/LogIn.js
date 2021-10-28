@@ -30,8 +30,8 @@ const LogIn = ({ setUser }) => {
 
   return (
     <div>
-      <form className="user-form" onSubmit={handleSubmit}>
-        <h2>Log in</h2>
+      <form className="user-form form-container" onSubmit={handleSubmit}>
+        <h2 className="form-title">Log in</h2>
         <label className="lbl" htmlFor="li-email">
           Email address:
         </label>{" "}
@@ -63,8 +63,12 @@ const LogIn = ({ setUser }) => {
         <div>
           {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
         </div>
-        <button type="submit">Submit</button>
-        <Link to="/signup">Don't have an account yet? Sign up!</Link>
+        <button className="sub-button" type="submit">
+          Submit
+        </button>
+        <Link className="other-form" to="/signup">
+          Don't have an account yet? Sign up!
+        </Link>
       </form>
     </div>
   );

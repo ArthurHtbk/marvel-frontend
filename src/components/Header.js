@@ -1,52 +1,105 @@
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import { useState, useEffect } from "react";
 import marvelLogo from "../images/logo-marvel.png";
 
 const Header = ({ userToken, setUser }) => {
+  const [showLinks, setShowLinks] = useState(false);
+
+  const history = useHistory();
+
+  useEffect(() => {
+    const handleLinks = () => {
+      console.log(showLinks);
+    };
+    handleLinks();
+  }, [showLinks]);
+
   return (
     <header>
-      <div className="header-top">
+      <nav className="navbar">
         <Link className="logo" to="/">
           <img src={marvelLogo} alt="Marvel logo" />
         </Link>
-        <div className="user-area">
+        <div className="links-area">
           {userToken ? (
             <div>
-              <button className="fav-button" type="button">
-                <Link to="/favorites">FAVORITES</Link>
-              </button>
-              <button
-                type="button"
+              <div
+                className="hamburger"
                 onClick={() => {
-                  setUser(null);
+                  setShowLinks(!showLinks);
                 }}
               >
-                LOG OUT
-              </button>
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+              </div>
+              <ul className="navbar-links" id={showLinks ? "displayed" : ""}>
+                <li>
+                  <Link to="/comics" className="link-item">
+                    Comics
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/characters" className="link-item">
+                    Characters
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/favorites" className="link-item">
+                    Favorites
+                  </Link>
+                </li>
+                <li>
+                  <span
+                    onClick={() => {
+                      setUser(null);
+                      history.push("/");
+                    }}
+                    className="link-item"
+                  >
+                    Log Out
+                  </span>
+                </li>
+              </ul>
             </div>
           ) : (
             <div>
-              <Link className="header-link connect" to="/signup">
-                Sign up
-              </Link>
-              <Link className="header-link connect" to="/login">
-                Log in
-              </Link>
+              <div
+                className="hamburger"
+                onClick={() => {
+                  setShowLinks(!showLinks);
+                }}
+              >
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+              </div>
+              <ul className="navbar-links" id={showLinks ? "displayed" : ""}>
+                <li>
+                  <Link to="/comics" className="link-item">
+                    Comics
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/characters" className="link-item">
+                    Characters
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/signup" className="link-item">
+                    Sign Up
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/login" className="link-item">
+                    Log In
+                  </Link>
+                </li>
+              </ul>
             </div>
           )}
         </div>
-      </div>
-      <div className="header-bottom">
-        <div className="split">
-          <Link className="header-link" to="/comics">
-            COMICS
-          </Link>
-        </div>
-        <div className="split">
-          <Link className="header-link" to="/characters">
-            CHARACTERS
-          </Link>
-        </div>
-      </div>
+      </nav>
     </header>
   );
 };

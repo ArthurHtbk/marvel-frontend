@@ -23,6 +23,12 @@ a:hover {
   cursor: pointer;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .header-top {
   background-color: #202020;
   height: 50px;
@@ -32,7 +38,40 @@ a:hover {
 }
 
 .logo {
-  margin: 0 150px;
+  height: 100px;
+}
+
+.navbar-links {
+  display: flex;
+}
+
+.link-item {
+  padding: 2rem;
+  display: block;
+  font-size: 2rem;
+}
+
+.link-item:hover {
+  cursor: pointer;
+  background: #555;
+}
+
+.hamburger {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  width: 30px;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  border-radius: 10px;
+  background-color: white;
 }
 
 .user-area {
@@ -48,6 +87,10 @@ a:hover {
   text-decoration: underline;
 }
 
+.header-button {
+  display: flex;
+}
+
 .fav-button {
   margin-right: 20px;
 }
@@ -58,7 +101,6 @@ a:hover {
 
 .lbl {
   font-size: 1.6rem;
-  margin-bottom: 15px;
 }
 
 .header-bottom {
@@ -146,12 +188,63 @@ p {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.container {
+.container,
+.form-container {
   max-width: 1280px;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
-  min-height: calc(100vh - 200px);
+  min-height: calc(100vh - 150px);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-title {
+  margin-bottom: 50px;
+}
+
+input {
+  margin-bottom: 15px;
+}
+
+.file-area {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 40px;
+  border: solid 1px #a5a6a7;
+  margin: 20px 0;
+  width: 80%;
+  border-radius: 5px;
+  height: 35px;
+}
+
+.label-file {
+  cursor: pointer;
+  font-size: 1.6rem;
+  color: white;
+  height: 47px;
+  line-height: 47px;
+}
+
+#choose-picture {
+  visibility: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.sub-button {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.other-form {
+  margin-bottom: 30px;
 }
 
 button {
@@ -353,7 +446,8 @@ form > input:focus {
   justify-content: center;
 }
 
-.character-card:hover {
+.character-card:hover,
+.comic-card:hover {
   box-shadow: 10px 10px 2px #000;
 }
 
@@ -451,6 +545,50 @@ form > input:focus {
 }
 
 @media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger:hover {
+    cursor: pointer;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .container,
+  .form-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: calc(100vh - 100px);
+  }
+
+  #displayed {
+    display: flex;
+  }
+
+  .links-area {
+    width: 100%;
+  }
+
+  .link-item {
+    text-align: center;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
   h1 {
     font-size: 6.8rem;
     margin: 30px;
@@ -461,6 +599,11 @@ form > input:focus {
     font-size: 1.6rem;
     margin: 30px;
     text-align: center;
+  }
+
+  .form-title {
+    margin-bottom: 50px;
+    margin-top: 50px;
   }
 
   .characters-hero {
@@ -541,5 +684,42 @@ form > input:focus {
 
   .marvel-wallpaper {
     height: 10%;
+  }
+
+  form > input {
+    width: 100%;
+    height: 35px;
+    padding-left: 20px;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-color: #a5a6a7;
+    border: transparent;
+    border-radius: 5px;
+    color: black;
+  }
+
+  .file-area {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+    border: solid 1px #a5a6a7;
+    margin: 20px 0;
+    width: 100%;
+    border-radius: 5px;
+    height: 35px;
+  }
+
+  .label-file {
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: white;
+    height: 47px;
+    line-height: 47px;
+  }
+
+  .lbl {
+    font-size: 1.2rem;
   }
 }

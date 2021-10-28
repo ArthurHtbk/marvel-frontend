@@ -54,8 +54,8 @@ const SignUp = ({ setUser }) => {
 
   return (
     <div>
-      <form className="user-form" onSubmit={handleSubmit}>
-        <h2>Sign up</h2>
+      <form className="user-form form-container" onSubmit={handleSubmit}>
+        <h2 className="form-title">Sign up</h2>
         <label className="lbl" htmlFor="username">
           Username:
         </label>
@@ -112,17 +112,19 @@ const SignUp = ({ setUser }) => {
           }}
         />{" "}
         <br />
-        <label className="lbl" htmlFor="choose-picture">
-          Choose profile picture:
-        </label>
-        <input
-          type="file"
-          name="choose-picture"
-          id="choose-picture"
-          onChange={(event) => {
-            setPicture(event.target.files[0]);
-          }}
-        />
+        <div className="file-area">
+          <label className="label-file" htmlFor="choose-picture">
+            Choose profile picture:
+          </label>
+          <input
+            type="file"
+            name="choose-picture"
+            id="choose-picture"
+            onChange={(event) => {
+              setPicture(event.target.files[0]);
+            }}
+          />
+        </div>
         <div>
           {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
         </div>
@@ -130,10 +132,13 @@ const SignUp = ({ setUser }) => {
           type="submit"
           disabled={errorMessage}
           style={{ cursor: errorMessage ? "not-allowed" : "pointer" }}
+          className="sub-button"
         >
           Submit
         </button>
-        <Link to="/login">Already have an account? Log in!</Link>
+        <Link className="other-form" to="/login">
+          Already have an account? Log in!
+        </Link>
       </form>
     </div>
   );
