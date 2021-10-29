@@ -67,7 +67,7 @@ const LogIn = ({ setUser }) => {
           Submit
         </button>
         <Link className="other-form" to="/signup">
-          Don't have an account yet? Sign up!
+          Don't have an account yet? Sign up
         </Link>
       </form>
     </div>

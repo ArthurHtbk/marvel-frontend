@@ -21,7 +21,7 @@ const Home = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              SEE TRAILER
+              WATCH TRAILER
             </a>
           </button>
         </div>
@@ -34,7 +34,7 @@ const Home = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              SEE TRAILER
+              WATCH TRAILER
             </a>
           </button>
         </div>
@@ -47,7 +47,7 @@ const Home = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              SEE TRAILER
+              WATCH TRAILER
             </a>
           </button>
         </div>
@@ -60,7 +60,7 @@ const Home = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              SEE TRAILER
+              WATCH TRAILER
             </a>
           </button>
         </div>
@@ -73,7 +73,7 @@ const Home = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              SEE TRAILER
+              WATCH TRAILER
             </a>
           </button>
         </div>
