@@ -1,6 +1,6 @@
 # My portfolio
 
-![Marvel](https://github.com/ArthurHtbk/marvel-front/blob/main/marvel_preview.png)
+![Marvel](https://github.com/ArthurHtbk/marvel-frontend/blob/main/marvel_preview.png)
 
 ---
 
