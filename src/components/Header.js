@@ -35,17 +35,17 @@ const Header = ({ userToken, setUser }) => {
               </div>
               <ul className="navbar-links" id={showLinks ? "displayed" : ""}>
                 <li>
-                  <Link to="/comics" className="link-item">
+                  <Link to="/comics" className="link-item" onClick={() => {setShowLinks(false)}}>
                     Comics
                   </Link>
                 </li>
                 <li>
-                  <Link to="/characters" className="link-item">
+                  <Link to="/characters" className="link-item" onClick={() => {setShowLinks(false)}}>
                     Characters
                   </Link>
                 </li>
                 <li>
-                  <Link to="/favorites" className="link-item">
+                  <Link to="/favorites" className="link-item" onClick={() => {setShowLinks(false)}}>
                     Favorites
                   </Link>
                 </li>
@@ -53,6 +53,7 @@ const Header = ({ userToken, setUser }) => {
                   <span
                     onClick={() => {
                       setUser(null);
+                      setShowLinks(false);
                       history.push("/");
                     }}
                     className="link-item"
@@ -76,22 +77,22 @@ const Header = ({ userToken, setUser }) => {
               </div>
               <ul className="navbar-links" id={showLinks ? "displayed" : ""}>
                 <li>
-                  <Link to="/comics" className="link-item">
+                  <Link to="/comics" className="link-item" onClick={() => {setShowLinks(false)}}>
                     Comics
                   </Link>
                 </li>
                 <li>
-                  <Link to="/characters" className="link-item">
+                  <Link to="/characters" className="link-item" onClick={() => {setShowLinks(false)}}>
                     Characters
                   </Link>
                 </li>
                 <li>
-                  <Link to="/signup" className="link-item">
+                  <Link to="/signup" className="link-item" onClick={() => {setShowLinks(false)}}>
                     Sign Up
                   </Link>
                 </li>
                 <li>
-                  <Link to="/login" className="link-item">
+                  <Link to="/login" className="link-item" onClick={() => {setShowLinks(false)}}>
                     Log In
                   </Link>
                 </li>

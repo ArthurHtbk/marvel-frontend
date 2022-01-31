@@ -635,6 +635,10 @@ form > input:focus {
   .marvel-wallpaper {
     height: 20%;
   }
+
+  .loading {
+    height: calc(100vh - 100px);
+  }
 }
 
 @media (max-width: 480px) {
