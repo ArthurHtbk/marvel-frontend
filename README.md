@@ -1,4 +1,4 @@
-# My portfolio
+# My Marvel tribute
 
 ![Marvel](https://github.com/ArthurHtbk/marvel-frontend/blob/main/marvel_preview.png)
 
@@ -13,7 +13,8 @@ As a big Marvel enthusiast, I had a lot of fun creating this Marvel themed full-
 - /favorites
 - /signup
 - /login
-User needs to be authenticated in orderto access the "/favorites" page. 
+User needs to be authenticated in order to access the "/favorites" page. 
+
 
 ## Packages & dependencies
 
@@ -21,6 +22,7 @@ User needs to be authenticated in orderto access the "/favorites" page.
 - [Axios](https://www.npmjs.com/package/axios)
 - [js-cookie](https://www.npmjs.com/package/js-cookie)
 - [react-router-dom](https://www.npmjs.com/package/js-cookie)
+
 
 ## Make yourself at home
 
@@ -47,7 +49,8 @@ npm start
 
 Then open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+
 ## Check this out!
 
-- **[My portfolio](https://focused-leavitt-6e6137.netlify.app/)**
+- **[My Marvel tribute](https://focused-leavitt-6e6137.netlify.app/)**
 - **The corresponding [back-end repository](https://github.com/ArthurHtbk/marvel-backend)**
