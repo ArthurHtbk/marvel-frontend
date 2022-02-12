@@ -51,5 +51,5 @@ Then open [http://localhost:3000](http://localhost:3000) to view it in your brow
 
 ## Check this out!
 
-- **[My Marvel tribute](https://focused-leavitt-6e6137.netlify.app/)**
+- **[My Marvel tribute](https://marvel-tribute-arthur.netlify.app)**
 - **The corresponding [back-end repository](https://github.com/ArthurHtbk/marvel-backend)**
